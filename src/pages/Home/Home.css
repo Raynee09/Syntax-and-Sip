@@ -1,0 +1,150 @@
+/* ==========================================================================
+   Home page — Hero section
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Hero
+   Full-viewport section. Café photograph as background.
+   The Navbar is position:fixed at 64px so it floats above with no gap.
+   -------------------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+
+  background-image: url('../../assets/hero.png');
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+
+  background-color: var(--color-espresso); /* fallback while image loads */
+
+  /* Soften the photograph: reduce saturation and contrast slightly
+     so it feels like a faded editorial backdrop, not a raw photograph.
+     No gradient, no opacity change to the image itself. */
+  filter: saturate(0.80) contrast(0.92);
+}
+
+/* Flat espresso tint — subtle warmth over the softened photograph. */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(59, 53, 53, 0.397);
+  pointer-events: none;
+}
+
+
+/* --------------------------------------------------------------------------
+   Hero content
+   Anchored to the lower-left — the naturally darker side of the photograph.
+   padding-top clears the 64px fixed navbar.
+   No background — the full-image tint on ::before handles readability.
+   -------------------------------------------------------------------------- */
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  min-height: 100vh;
+  padding-top: 64px;
+  padding-bottom: var(--space-2xl);
+  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
+
+  max-width: 640px;
+}
+
+
+/* --------------------------------------------------------------------------
+   Headline
+   --size-display-lg: clamp(2.5rem, 6vw, 5.5rem)
+   Bold, uppercase, editorial — proportionate rather than screen-filling.
+   -------------------------------------------------------------------------- */
+
+.hero__headline {
+  font-family: var(--font-display);
+  font-size: var(--size-display-lg);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.012em;
+  color: var(--color-caramel);
+  text-transform: uppercase;
+  margin: 0 0 var(--space-lg) 0;
+-webkit-text-stroke: 0.35px rgba(29, 8, 4, 0.65);
+
+text-shadow:
+  0 2px 2px rgba(29, 8, 4, 0.9),
+  0 5px 14px rgba(29, 8, 4, 0.7);
+}
+
+
+/* --------------------------------------------------------------------------
+   Tagline
+   -------------------------------------------------------------------------- */
+
+.hero__tagline {
+  font-family: var(--font-body);
+  font-size: var(--size-heading);
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--color-caramel);
+  opacity: 0.9;
+  margin: 0 0 var(--space-xl) 0;
+  max-width: 400px;
+
+text-shadow:
+  0 2px 4px rgba(29, 8, 4, 0.85);
+}
+
+
+/* --------------------------------------------------------------------------
+   CTA row
+   -------------------------------------------------------------------------- */
+
+.hero__ctas {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+/* Secondary button uses cream border/text — espresso border invisible on photo */
+.hero .btn--secondary {
+  color: var(--color-cream);
+  border-color: var(--color-cream);
+}
+
+.hero .btn--secondary:hover {
+  background-color: var(--color-cream);
+  color: var(--color-espresso);
+}
+
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .hero {
+    background-position: 25% center; /* keep the bar/window area visible on mobile */
+  }
+
+  .hero__content {
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+    padding-bottom: var(--space-xl);
+  }
+}
+
+@media (max-width: 479px) {
+  .hero__content {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+  }
+}

@@ -1,0 +1,115 @@
+/* ==========================================================================
+   Syntax & Sip — Global Styles
+   CSS reset + base body styles. No layout or decorative rules here.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Box-sizing reset
+   -------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* --------------------------------------------------------------------------
+   Margin / padding reset
+   -------------------------------------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   Base html / body
+   -------------------------------------------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--color-soft-beige);
+  color: var(--color-dark-text);
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  line-height: 1.6;
+}
+
+
+/* --------------------------------------------------------------------------
+   Remove default list styles where lists are used as UI components.
+   Individual components apply their own list styles when needed.
+   -------------------------------------------------------------------------- */
+
+ul,
+ol {
+  list-style: none;
+}
+
+
+/* --------------------------------------------------------------------------
+   Link base reset — individual components style their own links
+   -------------------------------------------------------------------------- */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* --------------------------------------------------------------------------
+   Image / media base
+   -------------------------------------------------------------------------- */
+
+img,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* --------------------------------------------------------------------------
+   Form element base reset
+   -------------------------------------------------------------------------- */
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* --------------------------------------------------------------------------
+   Reduced motion — collapse all animation and transition durations.
+   Components do not need to repeat this; it applies globally.
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
