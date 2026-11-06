@@ -1,0 +1,60 @@
+.ingredient-option {
+  cursor: pointer;
+  font-family: var(--font-body);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-caramel);
+  background: transparent;
+  color: var(--color-dark-text);
+  transition: background-color var(--transition-fast),
+              color var(--transition-fast),
+              border-color var(--transition-fast),
+              transform 100ms ease;
+  text-align: left;
+}
+
+.ingredient-option:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.ingredient-option:active {
+  transform: scale(0.97);
+}
+
+/* Chip — compact */
+.ingredient-option--chip {
+  padding: 8px 14px;
+  min-height: 36px;
+  font-size: var(--size-small);
+}
+
+/* Card — wider, with description */
+.ingredient-option--card {
+  padding: var(--space-md);
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.ingredient-option--selected {
+  background-color: var(--color-accent);
+  color: var(--color-cream);
+  border-color: var(--color-accent);
+}
+
+.ingredient-option__label {
+  display: block;
+  font-weight: 600;
+}
+
+.ingredient-option__desc {
+  display: block;
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.ingredient-option:hover:not(.ingredient-option--selected) {
+  border-color: var(--color-roasted-brown);
+}

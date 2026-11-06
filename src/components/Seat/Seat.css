@@ -1,0 +1,12 @@
+.seat--available:hover circle,
+.seat--available:hover rect {
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: scale(1.12);
+  transition: transform 150ms ease;
+}
+
+.seat:focus-visible {
+  outline: 2px solid #7A8C4F;
+  outline-offset: 3px;
+}

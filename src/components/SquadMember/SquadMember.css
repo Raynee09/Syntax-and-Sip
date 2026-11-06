@@ -1,0 +1,112 @@
+.squad-member {
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--color-caramel);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.squad-member__top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.squad-member__name {
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  font-weight: 600;
+  color: var(--color-espresso);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--color-caramel);
+  flex: 1;
+  text-align: left;
+}
+
+.squad-member__name:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.squad-member__name-input {
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  font-weight: 600;
+  color: var(--color-espresso);
+  border: none;
+  border-bottom: 1px solid var(--color-espresso);
+  background: transparent;
+  padding: 2px 4px;
+  flex: 1;
+  outline: none;
+}
+
+.squad-member__subtotal {
+  font-family: var(--font-display);
+  font-size: var(--size-heading);
+  font-weight: 700;
+  color: var(--color-espresso);
+  flex-shrink: 0;
+}
+
+.squad-member__remove {
+  background: none;
+  border: none;
+  color: var(--color-warm-clay);
+  cursor: pointer;
+  font-size: 0.9rem;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-fast);
+}
+
+.squad-member__remove:hover {
+  color: var(--color-espresso);
+}
+
+.squad-member__remove:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.squad-member__row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.squad-member__field-label {
+  font-family: var(--font-body);
+  font-size: var(--size-small);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-warm-clay);
+  width: 50px;
+  flex-shrink: 0;
+}
+
+.squad-member__select {
+  font-family: var(--font-body);
+  font-size: var(--size-small);
+  color: var(--color-espresso);
+  background: var(--color-cream);
+  border: 1px solid var(--color-caramel);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  cursor: pointer;
+  flex: 1;
+  min-height: 36px;
+}
+
+.squad-member__select:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}

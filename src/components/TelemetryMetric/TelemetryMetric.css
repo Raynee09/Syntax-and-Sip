@@ -1,0 +1,29 @@
+.telemetry-metric {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+}
+
+.telemetry-metric__icon {
+  font-size: 1rem;
+  color: var(--color-warm-clay);
+  width: 1.2rem;
+  flex-shrink: 0;
+}
+
+.telemetry-metric__label {
+  font-family: var(--font-body);
+  font-size: var(--size-small);
+  color: var(--color-warm-clay);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  flex: 1;
+}
+
+.telemetry-metric__value {
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  color: var(--color-espresso);
+  font-weight: 600;
+}

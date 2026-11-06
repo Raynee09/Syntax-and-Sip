@@ -1,0 +1,167 @@
+.squad-page {
+  padding-top: 64px;
+  min-height: 100vh;
+  background-color: var(--color-soft-beige);
+}
+
+.squad-page__header {
+  padding: var(--space-xl) var(--space-xl) var(--space-lg);
+}
+
+.squad-page__heading {
+  font-family: var(--font-display);
+  font-size: var(--size-display-lg);
+  font-weight: 700;
+  color: var(--color-espresso);
+  margin: 0 0 var(--space-sm) 0;
+  line-height: 1;
+}
+
+.squad-page__intro {
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  color: var(--color-warm-clay);
+  margin: 0;
+}
+
+.squad-page__session-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.squad-page__session-name {
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  color: var(--color-warm-clay);
+  margin: 0;
+}
+
+/* ── Create/Join ── */
+.squad-page__start {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+  padding: var(--space-xl);
+  max-width: 800px;
+}
+
+.squad-page__start-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.squad-page__input-label {
+  font-family: var(--font-body);
+  font-size: var(--size-small);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-warm-clay);
+}
+
+.squad-page__input {
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  color: var(--color-espresso);
+  background: var(--color-cream);
+  border: 1px solid var(--color-caramel);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  min-height: 44px;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.squad-page__input:focus {
+  border-color: var(--color-espresso);
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.squad-page__divider {
+  font-family: var(--font-body);
+  font-size: var(--size-small);
+  color: var(--color-caramel);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ── Session view ── */
+.squad-page__layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: var(--space-xl);
+  padding: 0 var(--space-xl) var(--space-2xl);
+  align-items: start;
+}
+
+.squad-page__members-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.squad-page__add-btn {
+  font-family: var(--font-body);
+  font-size: var(--size-small);
+  letter-spacing: 0.06em;
+  color: var(--color-deep-coffee);
+  background: none;
+  border: 1px dashed var(--color-caramel);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  cursor: pointer;
+  margin-top: var(--space-md);
+  min-height: 44px;
+  width: 100%;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.squad-page__add-btn:hover {
+  border-color: var(--color-espresso);
+  color: var(--color-espresso);
+}
+
+.squad-page__add-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.squad-page__splitter-col {
+  position: sticky;
+  top: calc(64px + var(--space-lg));
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.squad-page__checkout-cta {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+  .squad-page__layout {
+    grid-template-columns: 1fr;
+    padding: 0 var(--space-lg) var(--space-xl);
+  }
+  .squad-page__splitter-col {
+    position: static;
+  }
+}
+
+@media (max-width: 767px) {
+  .squad-page__header {
+    padding: var(--space-lg) var(--space-lg) var(--space-md);
+  }
+  .squad-page__start {
+    grid-template-columns: 1fr;
+    padding: var(--space-lg);
+  }
+  .squad-page__divider {
+    display: none;
+  }
+}

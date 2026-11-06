@@ -3,6 +3,29 @@
    All CSS custom properties for the application.
    Components must use these variables — never raw values.
    ========================================================================== */
+@font-face {
+  font-family: "Waghu WAGHU Bold";
+  src: url("../assets/fonts/WAGHU-PersonalUse.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Coffee Morning Sans";
+  src: url("../assets/fonts/CoffeeMorning-Reg.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Coffee Morning Sans";
+  src: url("../assets/fonts/CoffeeMorning-Bld.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
 

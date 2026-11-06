@@ -1,0 +1,84 @@
+.fuel-builder {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+/* On mobile: result moves above controls */
+@media (max-width: 767px) {
+  .fuel-builder {
+    grid-template-columns: 1fr;
+  }
+  .fuel-builder__result {
+    order: -1;
+  }
+}
+
+/* ── Result column ── */
+.fuel-builder__result {
+  position: sticky;
+  top: calc(64px + var(--space-lg));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.fuel-builder__drink-name {
+  font-family: var(--font-display);
+  font-size: var(--size-heading);
+  font-weight: 700;
+  color: var(--color-espresso);
+  text-align: center;
+}
+
+/* ── Controls column ── */
+.fuel-builder__controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.fuel-builder__section-label {
+  font-family: var(--font-body);
+  font-size: var(--size-small);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-warm-clay);
+  margin: 0 0 var(--space-sm) 0;
+}
+
+.fuel-builder__card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-sm);
+}
+
+.fuel-builder__chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.fuel-builder__footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+  padding-top: var(--space-md);
+}
+
+.fuel-builder__confirm-msg {
+  font-family: var(--font-body);
+  font-size: var(--size-small);
+  color: var(--color-accent);
+  margin: 0;
+  animation: confirm-fade 2.5s ease forwards;
+}
+
+@keyframes confirm-fade {
+  0%   { opacity: 1; }
+  70%  { opacity: 1; }
+  100% { opacity: 0; }
+}

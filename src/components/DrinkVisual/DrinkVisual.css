@@ -1,0 +1,10 @@
+.drink-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drink-visual__svg {
+  width: 160px;
+  height: auto;
+}
